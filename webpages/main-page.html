@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+		<meta charset="UTF-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Meal Dealer</title>
+		<style>
+            @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            .container {
+                display: flex;
+                flex-direction: column;
+                height: 100vh;
+                width: 100vw;
+            }
+            .header {
+                display: flex;
+                height: 15vh;
+                width: 100vw;
+            }
+            .logo {
+                background-color: #163446;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 10%;
+            }
+            .welcome {
+                background-color: #163446;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 90%;
+                color: #DCF3FE;
+                font-family: "Montserrat", sans-serif;
+                font-weight: bold;
+                font-size: 150%;
+                padding-right: 10%;
+            }
+            .tab {
+                background-color: #B0CFDF;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 150%;
+                height: 7vh;
+                width: 100vw;
+            }
+            .body {
+                background-color: #286181;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 80vh;
+                width: 100vw;
+                padding-bottom: 5%;
+            }
+            button {
+                background-color: #B0CFDF;
+                color: #286181;
+                font-family: "Montserrat", sans-serif;
+                font-weight: bold;
+                font-size: 60%;
+                border: none;
+                margin: 3%
+            }
+            h1 {
+                color: #DDF4FF;
+                font-family: "Montserrat", sans-serif;
+                font-weight: bold;
+                font-size: 800%;
+            }
+            h2 {
+                color: #DDF4FF;
+                font-family: 'Times New Roman', Times, serif;
+                font-weight: lighter;
+                font-size: 300%;
+            }
+            img {
+            }
+		</style>
+  </head>
+
+  <body>
+
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <img src="/images/2.png" alt="Description of the image" width="100" height="80">
+            </div>
+            <div class="welcome">
+                <p>WELCOME USERNAME</p>
+            </div>
+        </div>
+        <div class="tab">
+            <button onclick="createMeal()">CREATE CARD</button>
+            <button onclick="viewCards()">VIEW COLLECTION</button>
+            <button onclick="viewSettings()">ACCOUNT SETTINGS</button>
+            <button onclick="faq()">FAQ</button>
+        </div>
+        <div class="body">
+            <h1>MEAL DEALER</h1>
+            <h2>Making meal deals simple</h2>
+        </div>
+	</div>
+    <script>
+        const username = "jkliman23"
+
+        function createMeal() {
+            window.location.href = "filter-page.html"
+        }
+        function viewCards() {
+            window.location.href = "card-collection-page.html"
+        }
+        function viewSettings() {
+            window.location.href = "settings-page.html"
+        }
+        function faq() {
+            window.location.href = "faqs-page.html"
+        }
+
+        function displayPrevMeals() {
+            /*
+            Basically goes through the database for previous meals, and create buttons for them and they look like the cards
+            */
+        }
+
+        const welcomeText = document.querySelector(".welcome-text")
+        welcomeText.innerText = `Welcome ${username}!`
+
+        displayPrevMeals()
+
+    </script>
+
+  </body>
+
+</html>

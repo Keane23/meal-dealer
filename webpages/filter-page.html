@@ -5,9 +5,11 @@
 		<meta charset="UTF-8">
   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Meal Dealer</title>
+		<link rel="stylesheet" href="/stylesheet/style.css">
   </head>
 
   <body>
+<!-- 		
 		<p>Calories: 
 			<input type="range" min="0" max="100" step="1">
 		</p>
@@ -33,7 +35,201 @@
 			findProducts()
 			nextPage()
 		">Set filters</button>
-		
+		*/ -->
+		<div class="wrapper">
+			<div class="values">
+				<span>Calories: </span>
+				<span id="range1">
+					0
+				</span>
+				<span> &dash; </span>
+				<span id="range2">
+					1000
+				</span>
+			</div>
+			<div class="container">
+				<div class="slider-track first"></div>
+				<input type="range" min="0" max="1000" value="0" id="slider-1" oninput="
+				changeTrack('.first');
+				slideOne('slider-1', 'slider-2', 'range1')">
+				<input type="range" min="0" max="1000" value="1000" id="slider-2" oninput="
+				changeTrack('.first');
+				slideTwo('slider-1', 'slider-2', 'range2')">
+			</div>
+			<div class="values">
+				<span>Protein:</span>
+				<span id="range3">
+					0
+				</span>
+				<span> &dash; </span>
+				<span id="range4">
+					1000
+				</span>
+			</div>
+			<div class="container">
+				<div class="slider-track sec"></div>
+				<input type="range" min="0" max="1000" value="0" id="slider-3" oninput="
+				changeTrack('.sec');
+				slideOne('slider-3', 'slider-4', 'range3')">
+				<input type="range" min="0" max="1000" value="1000" id="slider-4" oninput="
+				changeTrack('.sec');
+				slideTwo('slider-3', 'slider-4', 'range4')">
+			</div>
+			<div class="values">
+				<span>Carbohydrates: </span>
+				<span id="range5">
+					0
+				</span>
+				<span> &dash; </span>
+				<span id="range6">
+					1000
+				</span>
+			</div>
+			<div class="container">
+				<div class="slider-track third"></div>
+				<input type="range" min="0" max="1000" value="0" id="slider-5" oninput="
+				changeTrack('.third');
+				slideOne('slider-5', 'slider-6', 'range5')">
+				<input type="range" min="0" max="1000" value="1000" id="slider-6" oninput="
+				changeTrack('.third');
+				slideTwo('slider-5', 'slider-6', 'range6')">
+			</div>
+			<div class="values">
+				<span>Fat: </span>
+				<span id="range7">
+					0
+				</span>
+				<span> &dash; </span>
+				<span id="range8">
+					1000
+				</span>
+			</div>
+			<div class="container">
+				<div class="slider-track four"></div>
+				<input type="range" min="0" max="1000" value="0" id="slider-7" oninput="
+				changeTrack('.four');
+				slideOne('slider-7', 'slider-8', 'range7')">
+				<input type="range" min="0" max="1000" value="1000" id="slider-8" oninput="
+				changeTrack('.four');
+				slideTwo('slider-7', 'slider-8', 'range8')">
+			</div>
+			<div class="values">
+				<span>Saturated Fat: </span>
+				<span id="range9">
+					0
+				</span>
+				<span> &dash; </span>
+				<span id="range10">
+					1000
+				</span>
+			</div>
+			<div class="container">
+				<div class="slider-track five"></div>
+				<input type="range" min="0" max="1000" value="0" id="slider-9" oninput="
+				changeTrack('.five');
+				slideOne('slider-9', 'slider-10', 'range9')">
+				<input type="range" min="0" max="1000" value="1000" id="slider-10" oninput="
+				changeTrack('.five');
+				slideTwo('slider-9', 'slider-10', 'range10')">
+			</div>
+			<div class="values">
+				<span>Sugar: </span>
+				<span id="range11">
+					0
+				</span>
+				<span> &dash; </span>
+				<span id="range12">
+					1000
+				</span>
+			</div>
+			<div class="container">
+				<div class="slider-track six"></div>
+				<input type="range" min="0" max="1000" value="0" id="slider-11" oninput="
+				changeTrack('.six');
+				slideOne('slider-11', 'slider-12', 'range11')">
+				<input type="range" min="0" max="1000" value="1000" id="slider-12" oninput="
+				changeTrack('.six');
+				slideTwo('slider-11', 'slider-12', 'range12')">
+			</div>
+			<div class="values">
+				<span>Fibre: </span>
+				<span id="range13">
+					0
+				</span>
+				<span> &dash; </span>
+				<span id="range14">
+					1000
+				</span>
+			</div>
+			<div class="container">
+				<div class="slider-track sev"></div>
+				<input type="range" min="0" max="1000" value="0" id="slider-13" oninput="
+				changeTrack('.sev');
+				slideOne('slider-13', 'slider-14', 'range13')">
+				<input type="range" min="0" max="1000" value="1000" id="slider-14" oninput="
+				changeTrack('.sev');
+				slideTwo('slider-13', 'slider-14', 'range14')">
+			</div>
+			<div class="values">
+				<span>Salt: </span>
+				<span id="range15">
+					0
+				</span>
+				<span> &dash; </span>
+				<span id="range16">
+					1000
+				</span>
+			</div>
+			<div class="container">
+				<div class="slider-track eight"></div>
+				<input type="range" min="0" max="1000" value="0" id="slider-15" oninput="
+				changeTrack('.eight');
+				slideOne('slider-15', 'slider-16', 'range15')">
+				<input type="range" min="0" max="1000" value="1000" id="slider-16" oninput="
+				changeTrack('.eight');
+				slideTwo('slider-15', 'slider-16', 'range16')">
+			</div>
+			<div class="checkbox-group">
+				<label class="custom-checkbox">
+					<input type="checkbox">
+					<span class="checkmark"></span>
+					Vegetarian
+				</label>
+				<label class="custom-checkbox">
+					<input type="checkbox">
+					<span class="checkmark"></span>
+					Vegan
+				</label>
+				<label class="custom-checkbox">
+					<input type="checkbox">
+					<span class="checkmark"></span>
+					Halal
+				</label>
+			</div>
+			
+			<div class="checkbox-group">
+				<label class="custom-checkbox">
+					<input type="checkbox">
+					<span class="checkmark"></span>
+					Gluten-free
+				</label>
+				<label class="custom-checkbox">
+					<input type="checkbox">
+					<span class="checkmark"></span>
+					Lactose-intolerant
+				</label>
+				<label class="custom-checkbox">
+					<input type="checkbox">
+					<span class="checkmark"></span>
+					Nut-allergy
+				</label>
+			</div>
+			<button onclick="nextPage()">Set Filters</button>
+		</div>
+
+
+
+		<script src="/scripts/script.js"></script>
 		<script>
 			function findProducts() {
 

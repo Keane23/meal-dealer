@@ -5,28 +5,93 @@
 		<meta charset="UTF-8">
   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Meal Dealer</title>
+		<style>
+			body {
+				background-color: #00A1CC;
+				overflow: hidden;
+			}
+			.container {
+				background-color: white;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+				height: 80vh;
+				margin: 400px;
+				margin-top: 80px;
+				margin-bottom: 80px;
+				overflow: hidden;
+				border-radius: 20px;
+				box-shadow: 0px 0px 10px;
+			}
+			.logo {
+				color: #00A1CC;
+				font-family: Roboto, sans-serif;
+				letter-spacing: 10px;
+				text-align: center;
+				font-size: 60px;
+				margin: 40px;
+				margin-top: 10px;
+				font-weight: bold;
+			}
+			.login {
+				font-family: Montserrat, sans-serif;
+				font-weight: bold;
+				height: 70px;
+				border: none;
+				margin: 10px;
+				padding: 20px;
+				cursor: pointer;
+				width: 86%;
+				font-size: 20px;
+				color: white;
+				background-color: #005878;
+			}
+			.back {
+				color:#005878;
+				background-color: white;
+				border: none;
+				font-size: 15px;
+				margin-top: 30px;
+				margin-bottom: 0px;
+				font-family: Montserrat, sans-serif;
+			}
+			input {
+				background-color: #E7E9EB;
+				color:#005878;
+				border: none;
+				height: 70px;
+				width: 80%;
+				margin: 10px;
+				padding-left: 20px;
+				padding-right: 20px;
+				font-size: 20px;
+				font-family: Monsterrat, sans-serif;
+				outline: none;
+			}
+			input:focus {
+				border: 2px solid #00A1CC;
+			}
+		</style>
   </head>
 
   <body>
-		<p>Meal Dealer</p>
-		<p>Username: <input></p>
-        <p>Password: <input></p>
-		<button onclick="
-			checkLoginInfo()
-		">Log In</button><br>
-		<button onclick="
-			back()
-		">Back</button>
-		
+	<div class="container">
+			<p class="logo">MEAL DEALER</p>
+			<input type="text" placeholder="username">
+			<input type="password" placeholder="password">
+			<button class="login" onclick="checkLoginInfo()">Log In</button><br>
+			<button class="back" onclick="back()">I don't have an account</button>
+	</div>
 		<script>
 			function checkLoginInfo() {
                 /*
                 checks whether username matches password in database, if matching, it automatically moves to filter-page.html, if it doesnt, a text appears that says wrong username or password, try again
                 */
-                window.location.href = "card-collection-page.html"
+                window.location.href = "main-page.html"
             }
             function back() {
-                window.location.href = "home-page.html"
+                window.location.href = "signup-page.html"
             }
 		</script>
 
