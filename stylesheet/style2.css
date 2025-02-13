@@ -1,0 +1,77 @@
+body {
+    background-color: #163446;
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    flex-direction: column;
+}
+
+.exit {
+    display: flex;
+    justify-content: flex-end;
+    width: 100vw;
+    height:10vh;
+    padding-top: 1%;
+    padding-right: 5%;
+}
+
+button {
+    font-family: Montserrat, sans-serif;
+	  font-weight: bold;
+    border: none;
+    padding: auto;
+    cursor: pointer;
+    width: 10%;
+    font-size: 20px;
+    color: #286181;
+    background-color: #B0CFDF;
+    height: 70%;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 400px;
+    height: 600px;
+    perspective: 1000px;
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    border: 2px solid #B0CFDF;
+    border-radius: 10% / 7%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    background-color: #286181;
+    color: black;
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    background-color: #286181;
+    color: #B0CFDF;
+    transform: rotateY(180deg);
+  }

@@ -5,16 +5,25 @@
 		<meta charset="UTF-8">
   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Meal Dealer</title>
+    <link rel="stylesheet" href="/stylesheet/style2.css">
   </head>
 
   <body>
-		<p>Your Card</p>
-		<button onclick="
-			flipCard()
-		">card</button><br>
-        <button onclick="
-			exit()
-		">Exit</button>
+    <div class="exit">
+      <button onclick="exit()">EXIT</button>  
+    </div>
+		<div class="flip-card">
+      <div class="flip-card-inner">
+        <div class="flip-card-front">
+        </div>
+        <div class="flip-card-back">
+          <h1>John Doe</h1>
+          <p>Architect & Engineer</p>
+          <p>We love that guy</p>
+        </div>
+      </div>
+    </div>
+        
 		
 		
 		<script>
@@ -27,7 +36,7 @@
                 /*
                 stores card in database, then exits to card collection page
                 */
-                window.location.href = "card-collection-page.html"
+                window.location.href = "main-page.html"
             }
 		</script>
 

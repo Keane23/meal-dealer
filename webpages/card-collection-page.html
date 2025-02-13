@@ -12,19 +12,16 @@
                 margin: 0;
                 padding: 0;
             }
-            body {
-                overflow: hidden;
-            }
             .container {
                 display: flex;
                 flex-direction: column;
                 height: auto;
-                width: 100vw;
+                width: auto;
             }
             .header {
                 display: flex;
                 height: 15vh;
-                width: 100vw;
+                width: auto;
             }
             .logo {
                 background-color: #163446;
@@ -52,17 +49,19 @@
                 align-items: center;
                 font-size: 150%;
                 height: 7vh;
-                width: 100vw;
+                width: auto;
             }
             .body {
+                height: auto;
+                width: auto;
                 background-color: #286181;
                 display: flex;
-                flex-direction: column;
                 justify-content: center;
-                align-items: center;
-                height: 80vh;
-                width: 100vw;
-                padding-bottom: 5%;
+                gap: 3%;
+                padding-top: 3%;
+            }
+            .sec {
+                padding-bottom: 3%;
             }
             button {
                 background-color: #B0CFDF;
@@ -85,7 +84,12 @@
                 font-weight: lighter;
                 font-size: 300%;
             }
-            img {
+            .card {
+                background-color: #286181;
+                border: 2px solid #B0CFDF;
+                border-radius: 10% / 7%;
+                width: 240px;
+                height: 360px;
             }
 		</style>
   </head>
@@ -98,18 +102,28 @@
                 <img src="/images/2.png" alt="Description of the image" width="100" height="80">
             </div>
             <div class="welcome">
-                <p>WELCOME USERNAME</p>
+                <p>YOUR CARD COLLECTION</p>
             </div>
         </div>
         <div class="tab">
             <button onclick="createMeal()">CREATE CARD</button>
-            <button onclick="viewCards()">VIEW COLLECTION</button>
+            <button>VIEW COLLECTION</button>
             <button onclick="viewSettings()">ACCOUNT SETTINGS</button>
             <button onclick="faq()">FAQ</button>
         </div>
         <div class="body">
-            <h1>MEAL DEALER</h1>
-            <h2>Making meal deals simple</h2>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+        </div>
+        <div class="body sec">
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
         </div>
 	</div>
     <script>
