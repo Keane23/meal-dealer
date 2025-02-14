@@ -175,7 +175,7 @@
     .carousel__snapper {
       animation-name: tonext, snap;
       animation-timing-function: ease;
-      animation-duration: 4s;
+      animation-duration: 0s;
       animation-iteration-count: infinite;
     }
   
@@ -270,7 +270,7 @@
 
   button {
     font-family: Montserrat, sans-serif;
-	font-weight: bold;
+	  font-weight: bold;
     height: 70px;
     border: none;
     padding: 20px;
