@@ -6,12 +6,14 @@
   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Meal Dealer</title>
 		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
 			body {
-				background-color: #00A1CC;
+				background-color: #163446;
 				overflow: hidden;
 			}
 			.container {
-				background-color: white;
+				background-color: #DDF4FF;
 				display: flex;
 				justify-content: center;
 				align-items: center;
@@ -22,21 +24,19 @@
 				margin-bottom: 80px;
 				overflow: hidden;
 				border-radius: 20px;
-				box-shadow: 0px 0px 10px;
 			}
 			.logo {
-				color: #00A1CC;
-				font-family: Roboto, sans-serif;
-				letter-spacing: 10px;
+				color: #286181;
+				font-family: "Montserrat", sans-serif;
 				text-align: center;
 				font-size: 60px;
 				margin: 40px;
 				margin-top: 10px;
+				margin-bottom: 20px;
 				font-weight: bold;
 			}
 			.login {
-				color: #005878;
-				font-family: Montserrat, sans-serif;
+				font-family: "Montserrat", sans-serif;
 				font-weight: bold;
 				height: 70px;
 				border: none;
@@ -46,32 +46,43 @@
 				width: 86%;
 				font-size: 20px;
 				color: white;
-				background-color: #005878;
+				background-color: #286181;
+			}
+			.login:hover {
+				background-color: #DDF4FF;
+				color: #286181;
+				border: 3px solid #286181;
+				transition: 0.2s;
 			}
 			.back {
-				color:#005878;
-				background-color: white;
+				color:#286181;
+				background-color: #DDF4FF;
 				border: none;
 				font-size: 15px;
-				margin-top: 10px;
+				margin-top: 20px;
 				margin-bottom: 0px;
-				font-family: Montserrat, sans-serif;
+				font-family: "Montserrat", sans-serif;
 			}
 			input {
-				background-color: #E7E9EB;
-				color:#005878;
-				border: none;
+				background-color: #B0CFDF;
+				color:#163446;
+				border: 2px solid #B0CFDF;
 				height: 70px;
 				width: 80%;
 				margin: 10px;
 				padding-left: 20px;
 				padding-right: 20px;
 				font-size: 20px;
-				font-family: Monsterrat, sans-serif;
+				font-family: "Montserrat", sans-serif;
 				outline: none;
+				text-align: center;
 			}
 			input:focus {
-				border: 2px solid #00A1CC;
+				border: 2px solid #286181;
+			}
+			input::placeholder {
+				color: #4A8292; /* Tomato red color */
+				opacity: 1; /* Ensures the color is applied */
 			}
 		</style>
   </head>

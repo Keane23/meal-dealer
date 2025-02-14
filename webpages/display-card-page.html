@@ -5,7 +5,7 @@
 		<meta charset="UTF-8">
   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Meal Dealer</title>
-    <link rel="stylesheet" href="/stylesheet/style2.css">
+    <link rel="stylesheet" href="/stylesheet/style-dcp.css">
   </head>
 
   <body>
@@ -15,29 +15,33 @@
 		<div class="flip-card">
       <div class="flip-card-inner">
         <div class="flip-card-front">
+            <textarea id="title" rows="2" cols="30" oninput="breakLine()" maxlength="15" placeholder="Enter Title Here"></textarea>
+            <p>CO-OP MEAL DEAL</p>
         </div>
         <div class="flip-card-back">
-          <h1>John Doe</h1>
-          <p>Architect & Engineer</p>
-          <p>We love that guy</p>
+          <h1>Nutrition Information</h1>
+          <h2 id="main__name">Main</h2>
+          <div class="separate">
+            <h3 class="main1">Placeholder</h3>
+            <h3 class="main2">Placeholder</h3>
+          </div>
+          <h2 id="snack__name">Snack</h2>
+          <div class="separate">
+            <h3 class="snack1">Placeholder</h3>
+            <h3 class="snack2">Placeholder</h3>
+          </div>
+          <h2 id="drink__name">Drink</h2>
+          <div class="separate">
+            <h3 class="drink1">Placeholder</h3>
+            <h3 class="drink2">Placeholder</h3>
+          </div>
         </div>
       </div>
     </div>
         
 		
 		
-		<script>
-			function flipCard() {
-                /*
-                flips card to see information, then after clicking, button to exit appears
-                */
-            }
-            function exit() {
-                /*
-                stores card in database, then exits to card collection page
-                */
-                window.location.href = "main-page.html"
-            }
+		<script src="/scripts/script-dcp.js">
 		</script>
 
   </body>

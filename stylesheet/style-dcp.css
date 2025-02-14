@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+body {
+    background-color: #163446;
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    flex-direction: column;
+}
+
+.exit {
+    display: flex;
+    justify-content: flex-end;
+    width: 100vw;
+    height:10vh;
+    padding-top: 1%;
+    padding-right: 5%;
+}
+
+button {
+    font-family: "Montserrat", sans-serif;
+	  font-weight: bold;
+    border: none;
+    padding: auto;
+    cursor: pointer;
+    width: 10%;
+    font-size: 20px;
+    color: #286181;
+    background-color: #B0CFDF;
+    height: 70%;
+    margin-top: 1%;
+}
+
+button:hover {
+  background-color: #163446;
+  color: #B0CFDF;
+  border: 3px solid #B0CFDF;
+  transition: 0.2s;
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 400px;
+    height: 600px;
+    perspective: 1000px;
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Position the front and back side */
+  .flip-card-front, .flip-card-back {
+    border: 2px solid #B0CFDF;
+    border-radius: 10% / 7%;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    background: linear-gradient(to bottom, #286181, #163446);
+
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front {
+    color: #DDF4FF;
+    font-size: 35px;
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  /* Style the back side */
+  .flip-card-back {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #286181;
+    color: #DDF4FF;
+    font-size: 35px;
+    font-family: "Montserrat", sans-serif;
+    transform: rotateY(180deg);
+  }
+
+  textarea {
+    background-color: transparent;
+    color: #DDF4FF;
+    width: 65%;
+    margin-top: 10%;
+    padding-left: 10%;
+    padding-right: 10%;
+    font-size: 50px;
+    font-family: "Montserrat", sans-serif;
+    outline: none;
+    border: none;
+    text-align: center;
+    resize: none; /* Prevents manual resizing */
+    line-height: 1;
+    height: 20%;
+}
+
+p {
+  margin-top: -4%;
+  color: #DDF4FF;
+  font-size: 50%;
+}
+
+h1 {
+  font-size: 40px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: lighter;
+  margin-bottom: 5px;
+}
+
+h2 {
+  max-width: 80%;
+  font-size: 17px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: lighter;
+  margin-bottom: 0px;
+}
+
+h3 {
+  font-size: 12px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: lighter;
+}
+
+.separate {
+  display: flex;
+}
+
+textarea::placeholder {
+  color: #4A8292; /* Tomato red color */
+  opacity: 1; /* Ensures the color is applied */
+}
