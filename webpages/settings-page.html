@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+		<meta charset="UTF-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Meal Dealer</title>
+		<style>
+            @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                overflow-x: hidden;
+            }
+            .container {
+                display: flex;
+                flex-direction: column;
+                height: auto;
+                width: 100vw;
+            }
+            .header {
+                display: flex;
+                height: 15vh;
+                width: 100vw;
+            }
+            .logo {
+                background-color: #163446;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 10%;
+            }
+            .welcome {
+                background-color: #163446;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 90%;
+                color: #DCF3FE;
+                font-family: "Montserrat", sans-serif;
+                font-weight: bold;
+                font-size: 150%;
+                padding-right: 10%;
+            }
+            .tab {
+                background-color: #B0CFDF;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 150%;
+                height: 7vh;
+                width: 100vw;
+            }
+            .body {
+                background-color: #286181;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                height: auto;
+                width: 100%;
+                padding-top: 5%;
+            }
+            button {
+                background-color: #B0CFDF;
+                color: #286181;
+                font-family: "Montserrat", sans-serif;
+                font-weight: bold;
+                font-size: 60%;
+                border: none;
+                margin: 3%;
+                cursor: pointer;
+            }
+            button:hover {
+                color: #163446;
+                transition: 0.2s;
+            }
+            h1 {
+                color: #DDF4FF;
+                font-family: "Montserrat", sans-serif;
+                font-weight: bold;
+                font-size: 400%;
+            }
+            h2 {
+                color: #DDF4FF;
+                font-family: 'Times New Roman', Times, serif;
+                font-weight: lighter;
+                font-size: 300
+            }
+            .user {
+                display: flex;
+                height: 500px;
+                background-color: white;
+                width: 80%;
+                margin-bottom: 5%;
+                overflow: hidden;
+            }
+            .password {
+                display: flex;
+                height: 570px;
+                background-color: white;
+                width: 80%;
+                margin-bottom: 10%;
+                overflow: hidden;
+            }
+            .description {
+                height:100%;
+                background-color: #175070;
+                width: 35%;
+                color: #B0CFDF;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding-left: 5%;
+            }
+            .change-username {
+                height:100%;
+                background-color: #1F5878;
+                width: 65%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .change-password {
+                height:100%;
+                background-color: #1F5878;
+                width: 65%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            input {
+				background-color: #B0CFDF;
+				color:#163446;
+				border: 2px solid #B0CFDF;
+				height: 60px;
+				width: 60%;
+				margin: 10px;
+				padding-left: 20px;
+				padding-right: 20px;
+				font-size: 20px;
+				font-family: "Montserrat", sans-serif;
+				outline: none;
+				text-align: center;
+                border-radius: 1% / 10%;
+			}
+			input:focus {
+				border: 2px solid #286181;
+			}
+			input::placeholder {
+				color: #4A8292; /* Tomato red color */
+				opacity: 1; /* Ensures the color is applied */
+			}
+            .save_username, .save_password {
+                width: 30%;
+                height: 40px;
+                margin-top: 5%;
+                margin-left: 39%;
+                font-size: 15px;
+                font-weight: lighter;
+                border-radius: 1% / 10%;
+                border: 3px solid #B0CFDF;
+            }
+            .save_username:hover, .save_password:hover {
+                background-color: #1F5878;
+                border: 3px solid #DDF4FF;
+                color: #DDF4FF;
+                transition: 0.2s;
+            }
+
+		</style>
+  </head>
+
+  <body>
+
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <img src="/images/2.png" alt="Description of the image" width="100" height="80">
+            </div>
+            <div class="welcome">
+                <p>ACCOUNT SETTINGS</p>
+            </div>
+        </div>
+        <div class="tab">
+            <button onclick="createMeal()">CREATE CARD</button>
+            <button onclick="viewCards()">VIEW COLLECTION</button>
+            <button onclick="viewSettings()">ACCOUNT SETTINGS</button>
+            <button onclick="faq()">FAQ</button>
+        </div>
+        <div class="body">
+            <div class="user">
+                <div class="description">
+                    <h1>Change username</h1>
+                </div>
+                <div class="change-username">
+                    <input type="text" placeholder="current username">
+                    <input type="text" placeholder="new username">
+			        <input type="password" placeholder="password">
+                    <button class="save_username">SAVE CHANGES</button>
+                </div>
+            </div>
+            <div class="password">
+                <div class="description">
+                    <h1>Change password</h1>
+                </div>
+                <div class="change-password">
+                    <input type="text" placeholder="username">
+			        <input type="password" placeholder="current password">
+                    <input type="password" placeholder="new password">
+                    <input type="password" placeholder="confirm new password">
+                    <button class="save_password">SAVE CHANGES</button>
+                </div>
+            </div>
+        </div>
+	</div>
+    <script>
+        const username = "jkliman23"
+
+        function createMeal() {
+            window.location.href = "filter-page.html"
+        }
+        function viewCards() {
+            window.location.href = "card-collection-page.html"
+        }
+        function viewSettings() {
+            window.location.href = "settings-page.html"
+        }
+        function faq() {
+            window.location.href = "faqs-page.html"
+        }
+
+        function displayPrevMeals() {
+            /*
+            Basically goes through the database for previous meals, and create buttons for them and they look like the cards
+            */
+        }
+
+        const welcomeText = document.querySelector(".welcome-text")
+        welcomeText.innerText = `Welcome ${username}!`
+
+        displayPrevMeals()
+
+    </script>
+
+  </body>
+
+</html>
