@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+		<meta charset="UTF-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Meal Dealer</title>
+		<style>
+            @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                overflow-x: hidden;
+            }
+            .container {
+                display: flex;
+                flex-direction: column;
+                height: auto;
+                width: 100vw;
+            }
+            .header {
+                display: flex;
+                height: 15vh;
+                width: 100vw;
+            }
+            .logo {
+                background-color: #163446;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 10%;
+            }
+            .welcome {
+                background-color: #163446;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 90%;
+                color: #DCF3FE;
+                font-family: "Montserrat", sans-serif;
+                font-weight: bold;
+                font-size: 150%;
+                padding-right: 10%;
+            }
+            .tab {
+                background-color: #B0CFDF;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 150%;
+                height: 7vh;
+                width: 100vw;
+            }
+            .body {
+                background-color: #286181;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: auto;
+                width: 100%;
+                padding-bottom: 5%;
+                padding-top: 5%
+            }
+            button {
+                display: flex;
+                flex-direction: column;
+                background-color: #B0CFDF;
+                color: #286181;
+                font-family: "Montserrat", sans-serif;
+                font-weight: bold;
+                font-size: 60%;
+                border: none;
+                margin: 3%;
+                cursor: pointer;
+            }
+            button:hover {
+                color: #163446;
+                transition: 0.2s;
+            }
+            h1 {
+                color: #DDF4FF;
+                font-family: "Montserrat", sans-serif;
+                font-weight: bold;
+                font-size: 500%;
+            }
+            h2 {
+                margin-top: 20px;
+                margin-bottom: 5%;
+                color: #DDF4FF;
+                font-family: 'Times New Roman', Times, serif;
+                font-weight: lighter;
+                font-size: 200%;
+            }
+            .qna {
+                height: auto;
+                width: 80%;
+                background-color: white;
+                color: #B0CFDF;
+                font-family: "Montserrat", sans-serif;
+                font-size: 30px;
+                margin-bottom: 3%;
+            }
+            .question {
+                padding-top: 3%;
+                padding-bottom: 3%;
+                height: auto;
+                width: 100%;
+                background-color: #175070;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: bold;
+                text-align: center;
+            }
+            .answer {
+                padding-top: 3%;
+                padding-bottom: 3%;
+                height: auto;
+                width: 100%;
+                background-color: #1F5878;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-weight: bold;
+                text-align: center;
+            }
+            .last {
+                margin-bottom: 10%;
+            }
+		</style>
+  </head>
+
+  <body>
+
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <img src="/images/2.png" alt="Description of the image" width="100" height="80">
+            </div>
+            <div class="welcome">
+                <p>FREQUENTLY ASKED QUESTIONS (FAQ)</p>
+            </div>
+        </div>
+        <div class="tab">
+            <button onclick="createMeal()">CREATE CARD</button>
+            <button onclick="viewCards()">VIEW COLLECTION</button>
+            <button onclick="viewSettings()">ACCOUNT SETTINGS</button>
+            <button onclick="faq()">FAQ</button>
+        </div>
+        <div class="body">
+            <div class="qna">
+                <div class="question">
+                    Can I customize my meal deal?
+                </div>
+                <div class="answer">
+                    Yes! You can filter meal options based on preferences like vegetarian, vegan, or specific drink/snack choices.
+                </div>
+            </div>
+            <div class="qna">
+                <div class="question">
+                    Does Meal Dealer show real-time Co-op meal deal prices?
+                </div>
+                <div class="answer">
+                    Pricing and availability may vary by location, so it’s best to double-check with your nearest Co-op store.
+                </div>
+            </div>
+            <div class="qna">
+                <div class="question">
+                    Can I save my favorite meal combinations?
+                </div>
+                <div class="answer">
+                    Yes! You can bookmark up to 10 of your favorite meal deals for quick access.
+                </div>
+            </div>
+            <div class="qna">
+                <div class="question">
+                    Will there be more stores besides Co-op?
+                </div>
+                <div class="answer">
+                    Future updates may include support for other meal deal providers! Stay tuned.
+                </div>
+            </div>
+            <div class="qna last">
+                <div class="question">
+                    Is Meal Dealer officially affiliated with Co-op?
+                </div>
+                <div class="answer">
+                    No, Meal Dealer is an independent project and is not officially affiliated with Co-op.
+                </div>
+            </div>
+            <h1>Need More Help?</h1>
+            <h1>Contact Us.</h1>
+            <h2>Reach out to us directly at +44-0000-0000-000</h2>
+        </div>
+	</div>
+    <script>
+        const username = "jkliman23"
+
+        function createMeal() {
+            window.location.href = "filter-page.html"
+        }
+        function viewCards() {
+            window.location.href = "card-collection-page.html"
+        }
+        function viewSettings() {
+            window.location.href = "settings-page.html"
+        }
+        function faq() {
+            window.location.href = "faqs-page.html"
+        }
+
+        function displayPrevMeals() {
+            /*
+            Basically goes through the database for previous meals, and create buttons for them and they look like the cards
+            */
+        }
+
+        const welcomeText = document.querySelector(".welcome-text")
+        welcomeText.innerText = `Welcome ${username}!`
+
+        displayPrevMeals()
+
+    </script>
+
+  </body>
+
+</html>
