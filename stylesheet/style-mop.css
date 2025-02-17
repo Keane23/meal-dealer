@@ -117,6 +117,7 @@
   
   ol, li {
     list-style: none;
+    list-style-type: none;
     margin: 0;
     padding: 0;
   }
@@ -153,7 +154,6 @@
   }
   
   .carousel__slide:before {
-    content: counter(item);
     position: absolute;
     top: 50%;
     left: 50%;

@@ -198,10 +198,10 @@
                     <h1>Change username</h1>
                 </div>
                 <div class="change-username">
-                    <input type="text" placeholder="current username">
-                    <input type="text" placeholder="new username">
-			        <input type="password" placeholder="password">
-                    <button class="save_username">SAVE CHANGES</button>
+                    <input class="u" type="text" placeholder="current username">
+                    <input class="u" type="text" placeholder="new username">
+			        <input class="u" type="password" placeholder="password">
+                    <button class="save_username" onclick="changeUsername()">SAVE CHANGES</button>
                 </div>
             </div>
             <div class="password">
@@ -209,11 +209,11 @@
                     <h1>Change password</h1>
                 </div>
                 <div class="change-password">
-                    <input type="text" placeholder="username">
-			        <input type="password" placeholder="current password">
-                    <input type="password" placeholder="new password">
-                    <input type="password" placeholder="confirm new password">
-                    <button class="save_password">SAVE CHANGES</button>
+                    <input class="p" type="text" placeholder="username">
+			        <input class="p" type="password" placeholder="current password">
+                    <input class="p" type="password" placeholder="new password">
+                    <input class="p" type="password" placeholder="confirm new password">
+                    <button class="save_password" onclick="changePassword()">SAVE CHANGES</button>
                 </div>
             </div>
         </div>
@@ -234,16 +234,23 @@
             window.location.href = "faqs-page.html"
         }
 
-        function displayPrevMeals() {
-            /*
-            Basically goes through the database for previous meals, and create buttons for them and they look like the cards
-            */
+        function changeUsername() {
+            let listOfElements = document.getElementsByClassName("u");
+            let newList = [];
+            for (let i = 0; i < listOfElements.length; i++) {
+                newList.push(listOfElements[i].value);
+                listOfElements[i].value = "";
+              }
         }
 
-        const welcomeText = document.querySelector(".welcome-text")
-        welcomeText.innerText = `Welcome ${username}!`
-
-        displayPrevMeals()
+        function changePassword() {
+            let listOfElements = document.getElementsByClassName("p");
+            let newList = [];
+            for (let i = 0; i < listOfElements.length; i++) {
+                newList.push(listOfElements[i].value);
+                listOfElements[i].value = "";
+              }
+        }
 
     </script>
 

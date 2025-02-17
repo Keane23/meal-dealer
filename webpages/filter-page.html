@@ -12,9 +12,7 @@
 		<div class="wrapper">
 			<div class="values">
 				<span>Calories: </span>
-				<span id="range1">
-					0
-				</span>
+				<span id="range1">0</span>
 				<span> &dash; </span>
 				<span id="range2">
 					1000
@@ -164,17 +162,17 @@
 			</div>
 			<div class="checkbox-group">
 				<label class="custom-checkbox">
-					<input type="checkbox">
+					<input type="checkbox" id="vegetarian">
 					<span class="checkmark"></span>
 					Vegetarian
 				</label>
 				<label class="custom-checkbox">
-					<input type="checkbox">
+					<input type="checkbox" id="vegan">
 					<span class="checkmark"></span>
 					Vegan
 				</label>
 				<label class="custom-checkbox">
-					<input type="checkbox">
+					<input type="checkbox" id="halal">
 					<span class="checkmark"></span>
 					Halal
 				</label>
@@ -182,36 +180,27 @@
 			
 			<div class="checkbox-group">
 				<label class="custom-checkbox">
-					<input type="checkbox">
+					<input type="checkbox" id="gluten-free">
 					<span class="checkmark"></span>
 					Gluten-free
 				</label>
 				<label class="custom-checkbox">
-					<input type="checkbox">
+					<input type="checkbox" id="lactose-intolerant">
 					<span class="checkmark"></span>
 					Lactose-intolerant
 				</label>
 				<label class="custom-checkbox">
-					<input type="checkbox">
+					<input type="checkbox" id="nut-allergy">
 					<span class="checkmark"></span>
-					Nut-allergy
+					Nut allergy
 				</label>
 			</div>
-			<button onclick="nextPage()">Set Filters</button>
+			<button onclick="findProducts(); nextPage()">Set Filters</button>
 		</div>
 
 
 
 		<script src="/scripts/script-fp.js"></script>
-		<script>
-			function findProducts() {
-
-			}
-			function nextPage() {
-				window.location.href = "meal-options-page.html"
-			}
-		</script>
-
   </body>
 
 </html>
