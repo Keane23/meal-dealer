@@ -120,3 +120,7 @@ function displayMealOptions() {
         </div>`
     }
 }
+
+function saveMeal() {
+    
+}
